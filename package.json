@@ -19,5 +19,11 @@
   "bugs": {
     "url": "https://github.com/NaagGit/Client/issues"
   },
-  "homepage": "https://github.com/NaagGit/Client"
+  "homepage": "https://github.com/NaagGit/Client",
+  "dependencies": {
+    "grunt": "^0.4.5"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5"
+  }
 }
