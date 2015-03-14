@@ -1,0 +1,23 @@
+{
+  "name": "Client",
+  "version": "1.0.0",
+  "description": "Client",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NaagGit/Client.git"
+  },
+  "keywords": [
+    "npm",
+    "client"
+  ],
+  "author": "Nagendra Gandla",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NaagGit/Client/issues"
+  },
+  "homepage": "https://github.com/NaagGit/Client"
+}

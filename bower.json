@@ -1,0 +1,34 @@
+{
+  "name": "Client",
+  "version": "0.0.0",
+  "authors": [
+    "goKick <nagendragandla001@gmail.com>"
+  ],
+  "description": "Bower Test",
+  "main": "app/css/main.css",
+  "keywords": [
+    "Bower",
+    "Client"
+  ],
+  "license": "MIT",
+  "homepage": "home.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.3",
+    "angular": "~1.3.14",
+    "bootstrap": "~3.3.2",
+    "underscore": "~1.8.2"
+  },
+  "devDependencies": {
+    "jquery": "~2.1.3",
+    "angular": "~1.3.14",
+    "bootstrap": "~3.3.2",
+    "underscore": "~1.8.2"
+  }
+}

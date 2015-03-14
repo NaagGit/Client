@@ -1,0 +1,14 @@
+{
+  "name": "Client",
+  "homepage": "https://github.com/NaagGit/Client",
+  "_release": "d7f774d862",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "d7f774d862a4ca325b8cba537ddfabbd99dad97f"
+  },
+  "_source": "https://github.com/NaagGit/Client.git",
+  "_target": "*",
+  "_originalSource": "https://github.com/NaagGit/Client.git",
+  "_direct": true
+}
