@@ -1,54 +1,34 @@
 module.exports = function(grunt) {
 
+    require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+
+
     grunt.registerTask('watch', [ 'watch' ]);
 
     grunt.initConfig({
-        concat: {
-            js: {
-                options: {
-                    separator: ';'
-                },
-                src: [
-                    'javascript/*.js'
-                ],
-                dest: 'public/js/main.min.js'
-            }
-        },
-        uglify: {
-            options: {
-                mangle: false
-            },
-            js: {
-                files: {
-                    'public/js/main.min.js': ['public/js/main.min.js']
+
+        connect: {
+            all: {
+                options:{
+                    port: 63342,
+                    hostname: "0.0.0.0",
+                    // Prevents Grunt to close just after the task (starting the server) completes
+                    // This will be removed later as `watch` will take care of that
+                    keepalive: true
                 }
             }
         },
-        less: {
-            style: {
-                files: {
-                    "public/css/style.css": "less/style.less"
-                }
-            }
-        },
-        watch: {
-            js: {
-                files: ['javascript/*.js'],
-                tasks: ['concat:js', 'uglify:js'],
-                options: {
-                    livereload: true
-                }
-            },
-            css: {
-                files: ['less/*.less'],
-                tasks: ['less:style'],
-                options: {
-                    livereload: true
-                }
+        open: {
+            all: {
+                // Gets the port from the connect configuration
+                path: 'http://localhost:<%= connect.all.options.port%>/Client/home.html'
             }
         }
     });
-
+    grunt.registerTask('server',[
+        'open',
+        'connect'
+    ]);
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-less');
