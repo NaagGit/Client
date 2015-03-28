@@ -1,0 +1,13 @@
+<div class="pagination pull-right"> <!--ng-show="paginator.pageCount() > 0-->
+    <ul>
+        <li style="list-style: none" ng-click="paginator.perviousPage()" ng-class="paginator.isFirstPage() && 'disabled'">
+            <a href ng-click="prevPage()" ng-class="paginator.isFirstPage()"> << </a>
+        </li>
+        <li style="list-style: none; float: left" ng-click="paginator.setPage(i)" ng-repeat="i in [] | forLoop:0:4" ng-class="paginator.page==i && 'active'">
+            <a href>{{i+1}}</a>
+        </li>
+        <li style="list-style: none" ng-click="paginator.nextPage()" ng-class="paginator.isLastPage() && 'disabled'">
+            <a href ng-class="paginator.isLastPage()"> >> </a>
+        </li>
+    </ul>
+</div>

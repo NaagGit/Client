@@ -1,0 +1,58 @@
+<div class="row col-xs-12 profsection" ng-controller="profController">
+    <div class="row col-xs-1"></div>
+    <div class="row col-xs-4 profContentLeft">
+        <div class="row col-xs-12 profilesOnly">
+            <div class="inner-addon right-addon searchIcon">
+                <i class="pull-right glyphicon glyphicon-search"></i>
+                <input type="text" class="form-control inputText" placeholder="Type user name" ng-model="uname"/>
+            </div>
+            <div class="col-xs-12 results"><b>{{(profileData | filter:{name:uname}).length}}</b> Results in web</div><br>
+            <div class="row col-xs-12 contactInfo" ng-repeat="profile in profileData | orderBy:'name' | filter:{name:uname} | pagination : currentPage*itemsPerPage | limitTo: itemsPerPage" ng-click="profileInfo(profile);">
+                <div class="col-xs-5"style="overflow: hidden">
+                    <img class="img-responsive img-thumbnail" ng-src="{{profile.source}}">
+                </div>
+                <div class="col-xs-7"style="margin-top: 2%">
+                    <span class="profileName">{{profile.name}}<br><small>{{profile.designation}}</small></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row col-xs-12 pagination-div pull-right">
+            <ul class="pagination">
+                <li ng-class="DisablePrevPage()">
+                    <a href ng-click="prevPage()"> << </a>
+                </li>
+                <li ng-repeat="n in range()" ng-class="{active: n == currentPage}" ng-click="setPage(n)">
+                    <a href>{{n+1}}</a>
+                </li>
+                <li ng-class="DisableNextPage()">
+                    <a href ng-click="nextPage()"> >> </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row col-xs-12 profContentRight">
+        <div class="descriptionInfo" ng-hide="myApp">
+            <div class="row col-xs-3">
+                <figure><img class="img-responsive" ng-src="{{clickedImg}}"> </figure>
+            </div>
+            <div class="col-xs-9"><span class="dataInfo"> {{profName}}<br>{{profDesignation}}<br>{{state}}</span></div>
+            <div class="col-xs-12 skills">
+                <div><br>
+                    <label for="skill" class="text-info">Skills:</label>
+                    <li class="skillList" id="skill" ng-repeat="sk in skill"><span class="dataInfo">{{sk}}</span></li>
+                </div><br>
+                <div>
+                    <label class="text-info" for="stateId">Office:</label><span id="stateId"><span class="dataInfo"> {{state}}</span></span>
+                </div><br>
+                <div>
+                    <label class="text-info" for="mailId">Email:</label><span class="text-danger dataInfo" id="mailId"> {{profName}}@accenture.com</span>
+                </div><br>
+                <div>
+                    <label class="text-info" for="mobileId">Mobile: </label><span class="text-capitalize dataInfo" id="mobileId">+91-{{mobile}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

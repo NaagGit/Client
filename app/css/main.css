@@ -1,3 +1,132 @@
-.abc{
-    height: 20px;
+.headerDiv{
+    background-color: #e6e6e6;
 }
+.img_icon{
+    /*margin-left: 5%;*/
+    margin-bottom: 1%;
+}
+.titleHead{
+    line-height: 200%;
+    text-align: left;
+    font-size: 100%;
+}
+.subTitle{
+    line-height: 250%;
+    text-align: left;
+    font-size: 100%;
+    text-align: right;
+    padding-right: 0%;
+    margin-right: 0%;
+}
+.profsection{
+    background-color: #e6e6e6;
+    height: 530px;
+}
+
+.headerContent{
+    background-color: RGB(255,255,255);
+}
+.mainContentData{
+    font-size: 21px;
+    color: #eb917f;
+    padding-left: 0%;
+}
+.navSection{
+    margin-top: 3%
+}
+.items{
+    background-color: #16ab95;
+    margin-left: 1px;
+}
+
+.items a{
+    color: #ffffff;
+}
+.logo{
+    margin-left: 2.5%;
+}
+.imageLogo{
+    position: relative;
+}
+
+.webLayout{
+    background-color: #e6e6e6;
+    height: 540px;
+    text-align: center;
+}
+
+.profContentLeft{
+    margin-top: 1%;
+    background-color: RGB(255,255,255);
+    height: 500px;
+    width: 25%;
+}
+.profContentRight{
+    margin-top: 1%;
+    margin-left: 2%;
+    background-color: RGB(255,255,255);
+    height: 500px;
+    width: 58%;
+}
+
+.profilesOnly{
+    position: relative;
+    height: 92%;
+    padding-left:4%;
+    overflow: hidden;
+}
+
+.inputText{
+    background-color: #e4e4e4;
+}
+.inner-addon {
+    position: relative;
+    margin-top: 2%;
+}
+
+.inner-addon .glyphicon {
+    position: absolute;
+    padding: 5%;
+}
+.results{
+    padding-left: 0%;
+}
+
+.contactInfo{
+    display: inline-block;
+    cursor: pointer;
+    height: 13%;
+    width: 100%;
+}
+.profileName{
+    font-size: 90%;
+}
+.contactInfo img{
+    height: auto;
+    width: auto;
+    overflow: hidden;
+}
+
+.clickedData{
+    margin-top: 2%;
+    padding-left: 0%;
+}
+
+.pagination >li > a{
+    border: none;
+}
+.pagination-div{
+    margin-top: -7%;
+}
+.descriptionInfo{
+    margin-top: 3%;
+}
+
+.footerSection{
+    font-size: 11px;
+    color: #eb917f;;
+}
+.contentBorder{
+    background-color: #e6e6e6;
+}
+
